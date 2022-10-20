@@ -3,15 +3,26 @@
 # Part 1
 
 def sum arr
-  arr.sum
+  return arr.sum
 end
 
 def max_2_sum arr
-  # YOUR CODE HERE
+  return arr.max(2).sum
 end
 
 def sum_to_n? arr, n
-  # YOUR CODE HERE
+  _temp = arr
+  arr.each{ |x|
+  _temp.delete_at(0)
+    
+    _temp.each{ |y| 
+      if n = (x*y)
+      return true
+      end
+    }
+    _temp.push(x)
+  }
+  return false
 end
 
 # Part 2
